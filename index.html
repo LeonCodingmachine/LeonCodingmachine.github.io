@@ -1,319 +1,257 @@
-<!DOCTYPE html>
-<!-- saved from url=(0027)https://www.hypergryph.com/ -->
-<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"><meta name="keywords" content="鹰角网络,鹰角官网,Hypergryph,明日方舟,明日方舟Arknights,明日方舟：终末地,Endfield,来自星尘,Ex Astris,montagne,蒙塔山工作室,上海鹰角,上海鹰角网络科技有限公司,鹰角游戏"><meta name="description" content="鹰角网络（HYPERGRYPH）于2017年在上海成立，是一家年轻的公司。鹰角网络/Montagne工作室于2017年在上海成立，创始成员来自谷歌/无极黑/Cygames等公司。我们希望将自己的才智与热情倾注到充满希望的逻辑艺术事业中，致力于构建独一无二的世界。"><link rel="shortcut icon" href="https://www.hypergryph.com/favicon.ico"><title>鹰角网络 - HyperGryph</title><script type="text/javascript" async="" src="./鹰角网络 - HyperGryph_files/analytics.js.下载"></script><script async="true" src="./鹰角网络 - HyperGryph_files/js"></script><script src="./鹰角网络 - HyperGryph_files/hm.js.下载"></script><script>var _hmt = _hmt || []
-            ;(function () {
-                var hm = document.createElement("script")
-                hm.src =
-                    "https://hm.baidu.com/hm.js?24d8cd20e5a3728877d88996f22d3eaf"
-                var s = document.getElementsByTagName("script")[0]
-                s.parentNode.insertBefore(hm, s)
-            })()</script><link href="./鹰角网络 - HyperGryph_files/index.0a9705.css" rel="stylesheet"><script defer="" src="./鹰角网络 - HyperGryph_files/sdk.entry.js.下载" id="HG_WEB_SDK_SCRIPT_ELEMENT"></script><style></style><style></style><input type="hidden" id="_w_simile" data-inspect-config="3"><script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script><style>@font-face {
-  font-family: "SDK_Geometos";
-  src: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.d021f75e893be1d378e8.ttf);
-  src: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.704638dfdec621936b07.eot?#iefix) format("embedded-opentype"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.cf9078cc55c4eb442783.woff) format("woff"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.d021f75e893be1d378e8.ttf) format("truetype"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.dd83af8a41dadeae6976.svg) format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "SDK_Sans-Regular";
-  src: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Sans-Regular.000a33aadf179181235e.ttf);
-  src: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Sans-Regular.e748f11ded91152a2448.eot?#iefix) format("embedded-opentype"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Sans-Regular.21fab825c02403aeb244.woff) format("woff"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Sans-Regular.000a33aadf179181235e.ttf) format("truetype"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Sans-Regular.ea17ab253cf9237f4627.svg) format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-.hg-login-dialog {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-}
-.hg-login-dialog[active] {
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.hg-login-dialog[active="true"] {
-  opacity: 1;
-  visibility: visible;
-}
-.hg-login-dialog[active="true"] .hg-login-dialog-layer {
-  transform: translate(-50%, -50%) scale(1);
-}
-.hg-login-dialog-mask {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.hg-login-dialog-layer {
-  color: #333333;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transition: transform 0.3s;
-  transform: translate(-50%, -50%) scale(1.2);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
-}
-.hg-login-dialog-layer-title {
-  display: flex;
-  align-items: center;
-  height: 5em;
-  background-color: #333333;
-  color: #eeeeee;
-  font-family: "SDK_Geometos";
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-  padding: 0 2em;
-  border-bottom: 3px solid #37b2ff;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.hg-login-dialog-layer-title img {
-  width: auto;
-  height: 80%;
-  margin-left: -1em;
-}
-.hg-login-dialog-layer-title .title-content {
-  margin-top: 0.2em;
-  font-size: 1.2em;
-}
-.hg-login-dialog-layer-body {
-  background-color: #ffffff;
-  padding: 1em 2em;
-  position: relative;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item {
-  width: 20em;
-  position: relative;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item + .hg-login-form-item {
-  margin-top: 1em;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item .hg-login-input-msg {
-  position: absolute;
-  font-size: 0.8em;
-  right: 0;
-  top: 0.25em;
-  color: red;
-  transition: opacity 0.3s, transform 0.3s;
-  transform: translateY(50%);
-  opacity: 0;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item .hg-login-input-label {
-  font-family: "SDK_Sans-Regular";
-  font-weight: bold;
-  white-space: nowrap;
-  margin-bottom: 0.5em;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item .hg-login-input-row {
-  display: flex;
-  height: 2em;
-  align-items: center;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item .hg-login-input {
-  flex: auto;
-  min-width: 0;
-  height: 100%;
-  box-sizing: border-box;
-  color: #999999;
-  font-size: 1.1em;
-  outline: none !important;
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid currentColor;
-  transition: border-bottom-color 0.3s;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item .hg-login-input:focus {
-  border-bottom: 1px solid #37b2ff;
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item[status="error"] .hg-login-input-msg {
-  opacity: 1;
-  transform: translateY(0%);
-}
-.hg-login-dialog-layer-body .hg-login-form .hg-login-form-item[status="error"] .hg-login-input {
-  border-bottom-color: red;
-}
-.hg-login-dialog-layer-body .hg-login-form .label-account {
-  display: block;
-}
-.hg-login-dialog-layer-body .hg-login-form .type-switch {
-  display: none;
-}
-.hg-login-dialog-layer-body .hg-login-form[data-type="0"] .login-by-code {
-  display: none;
-}
-.hg-login-dialog-layer-body .hg-login-form[data-type="0"] .type-switch.use-code {
-  display: block;
-}
-.hg-login-dialog-layer-body .hg-login-form[data-type="1"] .login-by-password {
-  display: none;
-}
-.hg-login-dialog-layer-body .hg-login-form[data-type="1"] .type-switch.use-pwd {
-  display: block;
-}
-.hg-login-dialog-layer-footer {
-  white-space: nowrap;
-  text-align: center;
-  margin: 1em 0 0.5em;
-}
-.hg-login-dialog-layer .hg-login-extra-row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.5em;
-}
-.hg-login-dialog-layer .hg-login-extra-row .hg-login-extra-btn {
-  cursor: pointer;
-  font-size: 0.8em;
-  color: #37b2ff;
-  text-decoration: none;
-}
-.hg-login-dialog-layer .hg-login-dialog-btn {
-  font-family: "SDK_Sans-Regular";
-  flex: none;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0.8em;
-  padding: 0.5em;
-  line-height: 1;
-  background-color: transparent;
-  color: #999999;
-  border: 1px solid currentColor;
-  transition: color 0.3s;
-}
-.hg-login-dialog-layer .hg-login-dialog-btn:focus {
-  outline: none;
-}
-.hg-login-dialog-layer .hg-login-dialog-btn:hover {
-  color: #37b2ff;
-}
-.hg-login-dialog-layer .hg-login-dialog-btn + .hg-login-dialog-btn {
-  margin-left: 1em;
-}
-.hg-login-dialog-layer .hg-login-dialog-btn.size-lg {
-  font-size: 1em;
-  font-weight: bold;
-  padding: 0.5em 2em;
-}
-.hg-login-dialog-toast-container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.7);
-  color: #eeeeee;
-  max-width: 80%;
-  border-radius: 1em;
-  padding: 1em;
-  text-align: center;
-  box-sizing: border-box;
-}
-</style><style>@font-face {
-  font-family: "SDK_Geometos";
-  src: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.d021f75e893be1d378e8.ttf);
-  src: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.704638dfdec621936b07.eot?#iefix) format("embedded-opentype"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.cf9078cc55c4eb442783.woff) format("woff"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.d021f75e893be1d378e8.ttf) format("truetype"), url(https://web.hycdn.cn/hg_web_sdk/lib/assets/SDK_Geometos.dd83af8a41dadeae6976.svg) format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-.hg-logout-dialog {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-}
-.hg-logout-dialog[active] {
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.hg-logout-dialog[active="true"] {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-}
-.hg-logout-dialog[active="true"] .hg-logout-dialog-layer {
-  transform: translate(-50%, -50%) scale(1);
-}
-.hg-logout-dialog-mask {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.hg-logout-dialog-layer {
-  color: #333333;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transition: transform 0.3s;
-  transform: translate(-50%, -50%) scale(1.2);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
-}
-.hg-logout-dialog-layer-title {
-  display: flex;
-  align-items: center;
-  height: 5em;
-  background-color: #333333;
-  color: #eeeeee;
-  font-family: "SDK_Geometos";
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-  padding: 0 2em;
-  border-bottom: 3px solid #37b2ff;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.hg-logout-dialog-layer-title img {
-  width: auto;
-  height: 80%;
-  margin-left: -1em;
-}
-.hg-logout-dialog-layer-title .title-content {
-  margin-top: 0.2em;
-  font-size: 1.2em;
-}
-.hg-logout-dialog-layer-body {
-  background-color: #ffffff;
-  padding: 1em 2em;
-  position: relative;
-}
-.hg-logout-dialog-layer-footer {
-  white-space: nowrap;
-  text-align: center;
-  margin: 1em 0 0.5em;
-}
-.hg-logout-dialog-layer .hg-logout-info {
-  text-align: center;
-}
-.hg-logout-dialog-layer .hg-logout-dialog-btn {
-  flex: none;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0.8em;
-  padding: 0.5em;
-  line-height: 1;
-  background-color: transparent;
-  color: #999999;
-  border: 1px solid currentColor;
-  transition: color 0.3s;
-}
-.hg-logout-dialog-layer .hg-logout-dialog-btn:focus {
-  outline: none;
-}
-.hg-logout-dialog-layer .hg-logout-dialog-btn:hover {
-  color: #37b2ff;
-}
-.hg-logout-dialog-layer .hg-logout-dialog-btn + .hg-logout-dialog-btn {
-  margin-left: 1em;
-}
-.hg-logout-dialog-layer .hg-logout-dialog-btn.size-lg {
-  font-size: 1em;
-  font-weight: bold;
-  padding: 0.5em 2em;
-}
-</style></head><body><div id="root" class="isDesktop"><div class="udsC1Y"><div class="VP7dRL"><div class="tns-outer" id="tns2-ow"><div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">2</span>  of 4</div><div id="tns2-mw" class="tns-ovh"><div class="tns-inner" id="tns2-iw"><div class="x1oCKy  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns2" style="transition-duration: 0s; transform: translate3d(-16.6667%, 0px, 0px);"><div class="p964by tns-item tns-slide-cloned" style="background-image: url(&quot;https://web-ipv6.hycdn.cn/hypergryph/official/assets/img/04.4ceb5d.jpg&quot;);" aria-hidden="true" tabindex="-1"></div><div class="p964by tns-item tns-slide-active" style="background-image: url(&quot;https://web-ipv6.hycdn.cn/hypergryph/official/assets/img/01.7e6a24.jpg&quot;);" id="tns2-item0"></div><div class="p964by tns-item" style="background-image: url(&quot;https://web-ipv6.hycdn.cn/hypergryph/official/assets/img/02.26dbc9.jpg&quot;);" id="tns2-item1" aria-hidden="true" tabindex="-1"></div><div class="p964by tns-item" style="background-image: url(&quot;https://web-ipv6.hycdn.cn/hypergryph/official/assets/img/03.551934.jpg&quot;);" id="tns2-item2" aria-hidden="true" tabindex="-1"></div><div class="p964by tns-item" style="background-image: url(&quot;https://web-ipv6.hycdn.cn/hypergryph/official/assets/img/04.4ceb5d.jpg&quot;);" id="tns2-item3" aria-hidden="true" tabindex="-1"></div><div class="p964by tns-item tns-slide-cloned" style="background-image: url(&quot;https://web-ipv6.hycdn.cn/hypergryph/official/assets/img/01.7e6a24.jpg&quot;);" aria-hidden="true" tabindex="-1"></div></div></div></div></div><div class="V48vCh">‹</div><div class="e7CyB4">›</div></div><header class="PGWyRm"><div class="LDgDNl"></div><div class="CZgO78"><div class="UK8TK0"><button>登录</button><div class="ZQYw9S"></div><a href="https://ak.hypergryph.com/user" target="_blank" rel="noopener noreferrer">注册</a></div></div></header><div class="SH5RFV"><div class="lspsY4 scroll"><header><div class="ZIIxvw"></div></header><div class="_k6fJ5" id="dragBoxContainer"><div class="zGsKyH HY6xoi A4vXAd" style="left: 30px; top: 90px; z-index: 500; opacity: 1;"><div class="m412NU"><div class="WIMfCz xtwD7s"><div class="kRjBLY"><div>关于我们</div><div class="WwThKe">ABOUT US</div></div></div></div><div class="_M9vgl clcaVX"><p>鹰角网络（HYPERGRYPH）于2017年在上海成立，是一家年轻的公司。</p><p>我们希望将自己的才智与热情倾注到充满希望的逻辑艺术事业中，<br>致力于构建独一无二的世界。</p></div></div><div class="zGsKyH HY6xoi IcOfD1" style="left: 2110px; top: 190px; z-index: 501; opacity: 1;"><div class="m412NU"><div class="WIMfCz"><div class="kRjBLY"><div>作品</div><div class="WwThKe">PROJECTS</div></div></div></div><div class="_M9vgl"><div id="projectSlider" class="zKL7_H"><div class="tns-outer" id="tns1-ow"><div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">2</span>  of 3</div><div id="tns1-mw" class="tns-ovh"><div class="tns-inner" id="tns1-iw"><div class="z0p9QJ  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns1" style="transition-duration: 0s; transform: translate3d(-20%, 0px, 0px);"><a href="https://endfield.hypergryph.com/" class="f3gt4y tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1"><figure><img src="./鹰角网络 - HyperGryph_files/endfield.9ab916.jpg"></figure></a><a href="https://ak.hypergryph.com/" class="f3gt4y tns-item tns-slide-active" id="tns1-item0"><figure><img src="./鹰角网络 - HyperGryph_files/arknights.8658b6.jpg"></figure></a><a href="https://exa.hypergryph.com/" class="f3gt4y tns-item" id="tns1-item1" aria-hidden="true" tabindex="-1"><figure><img src="./鹰角网络 - HyperGryph_files/exastris.df37bb.jpg"></figure></a><a href="https://endfield.hypergryph.com/" class="f3gt4y tns-item" id="tns1-item2" aria-hidden="true" tabindex="-1"><figure><img src="./鹰角网络 - HyperGryph_files/endfield.9ab916.jpg"></figure></a><a href="https://ak.hypergryph.com/" class="f3gt4y tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1"><figure><img src="./鹰角网络 - HyperGryph_files/arknights.8658b6.jpg"></figure></a></div></div></div></div><div class="Arvgok">‹</div><div class="yrQJpl">›</div></div></div></div><div class="zGsKyH HY6xoi babelPiece KK8APk" data-index="1" style="left: 202px; top: 561px; z-index: 502; opacity: 1;"><div class="_M9vgl"><img src="./鹰角网络 - HyperGryph_files/babel-1.d6771e.png"></div></div><div class="zGsKyH HY6xoi babelPiece KK8APk" data-index="2" style="left: 106px; top: 561px; z-index: 503; opacity: 1;"><div class="_M9vgl"><img src="./鹰角网络 - HyperGryph_files/babel-2.bcbf6a.png"></div></div><div class="zGsKyH HY6xoi babelPiece KK8APk" data-index="3" style="left: 358px; top: 561px; z-index: 504; opacity: 1;"><div class="_M9vgl"><img src="./鹰角网络 - HyperGryph_files/babel-3.fffa2e.png"></div></div><div class="zGsKyH HY6xoi babelPiece KK8APk" data-index="4" style="left: 30px; top: 561px; z-index: 505; opacity: 1;"><div class="_M9vgl"><img src="./鹰角网络 - HyperGryph_files/babel-4.89fc36.png"></div></div><div class="zGsKyH HY6xoi ezGbjN" style="left: 30px; top: 240px; z-index: 506; opacity: 1;"><div class="m412NU"><div class="WIMfCz fU0tjd"><div class="kRjBLY"><div>加入我们</div><div class="WwThKe">CAREER</div></div></div></div><div class="_M9vgl clcaVX"><p>我们正在寻找更多喜爱互动娱乐和前卫创作的成员，</p><p>请前往“鹰角网络招聘”微信公众号查看当前热招职位；</p><p>简历投递邮箱：recruit@hypergryph.com</p></div><div class="oxi14Y"><img src="./鹰角网络 - HyperGryph_files/recruit-qrcode.e7c200.jpg" alt="recruit"></div></div><div class="zGsKyH HY6xoi tbIIz0" style="left: 30px; top: 394px; z-index: 507; opacity: 1;"><div class="m412NU"><div class="WIMfCz fU0tjd"><div class="kRjBLY"><div>联系我们</div><div class="WwThKe">CONTACT US</div></div></div></div><div class="_M9vgl clcaVX"><p>请联系 cs@hypergryph.com<br>或在微博联系我们！</p><p><a class="a5pJuC" href="https://weibo.com/arknights" target="_blank" title="访问微博"></a></p></div></div><div class="zGsKyH HY6xoi CaXnbd" style="left: 2370px; top: 456px; z-index: 508; opacity: 1;"><div class="_M9vgl"><img src="./鹰角网络 - HyperGryph_files/rhodes-island.c19d19.png"></div></div></div><footer class="CldoPx OEWw3F"><div class="T5kYJV"><p><span>Copyright ©2017 上海鹰角网络科技有限公司</span><span><a target="_blank" href="https://beian.miit.gov.cn/">沪ICP备17022476号-1</a></span><span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402005145"><img src="./鹰角网络 - HyperGryph_files/beian.90f1c9.png">沪公网安备31010402005145号</a></span></p><p><span><img class="a44p9t" src="./鹰角网络 - HyperGryph_files/anti-fraud.a39afa.jpg">亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</span></p><p><span>上海市嘉定区南翔镇银翔路799号昌辉大厦504-1室 电话：021-54397650</span></p></div></footer></div></div></div></div><script defer="defer" src="./鹰角网络 - HyperGryph_files/index.f8bc2a.js.下载"></script><div id="HYPERGRYPH_LOGOUT_DIALOG" style="position: absolute; z-index: 999;"><div class="hg-logout-dialog"> <div class="hg-logout-dialog-mask"></div> <div class="hg-logout-dialog-layer"> <div class="hg-logout-dialog-layer-title"> <img src="./鹰角网络 - HyperGryph_files/icon.e6666cd11b2a7b982b6d.png" alt="HG_LOGO"> <div class="title-content">HYPERGRYPH<br>ACCOUNT.</div> </div> <div class="hg-logout-dialog-layer-body"> <div class="hg-logout-info"> 您确认要登出现在的账号吗？ </div> <div class="hg-logout-dialog-layer-footer"> <button class="hg-logout-dialog-btn size-lg submit" type="submit"> 确认 </button> <button class="hg-logout-dialog-btn size-lg cancel" type="button"> 取消 </button> </div> </div> </div> </div> </div><div id="HYPERGRYPH_LOGIN_DIALOG" style="position: absolute; z-index: 999;"><div class="hg-login-dialog"> <div class="hg-login-dialog-mask"></div> <div class="hg-login-dialog-layer"> <div class="hg-login-dialog-layer-title"> <img src="./鹰角网络 - HyperGryph_files/icon.e6666cd11b2a7b982b6d.png" alt="HG_LOGO"> <div class="title-content">HYPERGRYPH<br>ACCOUNT.</div> </div> <div class="hg-login-dialog-layer-body"> <form id="login-form" class="hg-login-form" data-type="0"> <div class="hg-login-form-item login-account"> <span class="hg-login-input-msg"></span> <div class="hg-login-input-label label-account"> 手机号: </div> <div class="hg-login-input-row"> <input name="account" id="hg-login-account" class="hg-login-input" type="text"> </div> </div> <div class="hg-login-form-item login-by-password"> <span class="hg-login-input-msg"></span> <div class="hg-login-input-label">密码:</div> <div class="hg-login-input-row"> <input name="password" id="hg-login-password" class="hg-login-input" type="password"> </div> </div> <div class="hg-login-form-item login-by-code"> <span class="hg-login-input-msg"></span> <div class="hg-login-input-label">验证码:</div> <div class="hg-login-input-row"> <input name="code" id="hg-login-code" class="hg-login-input" type="text"> <button id="send-code-btn" class="hg-login-dialog-btn" style="margin-left:.5em" type="button"> 发送验证码 </button> </div> </div> <div class="hg-login-extra-row"> <a class="hg-login-extra-btn type-switch use-code" href="javascript:void(0)">使用短信验证码登录</a> <a class="hg-login-extra-btn type-switch use-pwd" href="javascript:void(0)">使用密码登录</a> <a class="hg-login-extra-btn" id="to-user-center" href="https://ak.hypergryph.com/user" target="_blank">注册账号</a> </div> <div class="hg-login-dialog-layer-footer"> <button class="hg-login-dialog-btn size-lg submit" type="submit"> 登录 </button> <button class="hg-login-dialog-btn size-lg cancel" type="button"> 取消 </button> </div> </form> </div> </div> </div> </div></body></html>
+<html>
+	<head>
+		<title>我的第一个HTML页面</title>
+	</head>
+	<body>
+		<div class="div">
+			<div class="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈">
+			  哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+			</div>
+			<div class="哈哈-本是表达开心之意，如今我们却要用-哈哈哈哈哈-笑死">
+			  “哈哈”本是表达开心之意，如今我们却要用“哈哈哈哈哈”“笑死”“恍恍惚惚”等词来替代表达。我们会发现找到能准确表达自己意思的词越来越难了。
+			</div>
+			<a
+			  href="https://www.hypergryph.com/"
+			  target="_blank"
+			  class="表示高度的词语-很、高、太-使用久了也会失去锋芒-不再表示"
+			>
+			  <h1>
+				<span style="color: rgb(255, 0, 0); background-color: rgb(187, 187, 187)">
+				  点击这个可以跳转到鹰角官网
+				</span>
+				<code style="color: rgb(255, 0, 0); background-color: rgb(187, 187, 187)">
+				  <span class="ql-cursor">﻿</span>
+				</code>
+			  </h1>
+			</a>
+			<div class="div-2">“通话膨胀”</div>
+			<div class="这是一种语言贬值-语义磨损-词义弱化的表现。语义在使用中产生">
+			  这是一种语言贬值/语义磨损/词义弱化的表现。语义在使用中产生磨损，
+			  使用时的意义和词典义相比程度更加弱化了。
+			</div>
+			<div class="div-3">
+			  虽然有人对此种现象表示了肯定，但仍然有不少学者持批判态度。
+			</div>
+			<div class="词语滥用使得词义掉价，我们陷入了自己编就的-文字失语-陷阱">
+			  “词语滥用使得词义掉价，我们陷入了自己编就的“文字失语”陷阱，逐渐失去精确的表达。”
+			</div>
+			<div class="人们打出一连串的-哈哈哈哈哈-，比寻找合适的文本词语和表情包">
+			  人们打出一连串的“哈哈哈哈哈”，比寻找合适的文本词语和表情包更为方便，与真实的情绪表达相比，人们更倾向于利用膨胀语言这一表演手段。
+			</div>
+			<div class="div-4">《“通哈膨胀”：语言贬值中的社交表演》</div>
+			<div class="币制是交换财富的手段，语言是表达思想和情感的媒介；如同制币">
+			  “币制是交换财富的手段，语言是表达思想和情感的媒介；如同制币与其背后财富的不匹配而生的通胀，语言和语言背后的思想、情感的不匹配，就是语言的通胀。”
+			</div>
+			<div class="div-5">
+			  <picture>
+				<source
+				  srcset="
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?format=webp&width=100   100w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?format=webp&width=200   200w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?format=webp&width=400   400w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?format=webp&width=800   800w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?format=webp&width=1200 1200w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?format=webp&width=1600 1600w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?format=webp&width=2000 2000w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d
+				  "
+				  type="image/webp"
+				/>
+				<img
+				  loading="lazy"
+				  src="https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d"
+				  srcset="
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?width=100   100w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?width=200   200w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?width=400   400w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?width=800   800w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?width=1200 1200w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?width=1600 1600w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d?width=2000 2000w,
+					https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F1f557710bc6d4c18b8c90ed14c33800d
+				  "
+				  class="image"
+				/>
+			  </picture>
+			  <div class="builder-image-sizer image-sizer"></div>
+			</div>
+			<div class="div-6">《论语言的通货膨胀》</div>
+			<div class="在调研的过程中，我们发现了一个现象-这些学者们在文章中都提">
+			  在调研的过程中，我们发现了一个现象——这些学者们在文章中都提到了“情感”/“情绪”等字眼。
+			  互联网中的语言是为人们的情感表达需求而服务的，语言的“通货膨胀”是否也暗示着情感的通货膨胀？
+			</div>
+			<div class="而正是这种通过字词符号数量表达重视、拉高情绪阈值的-滥用-，">
+			  而正是这种通过字词符号数量表达重视、拉高情绪阈值的“滥用”，引发网友对“语言通货膨胀”的担忧。如果今天七个“哈”是大笑，明天是不是要十个、二十个才行？如果今天“神仙颜值”已经是极限，那么日后是不是用“千年一遇”才能“更上一层楼”？
+			</div>
+			<div class="div-7">《动辄多字叠用，是“语义磨损”还是“语言通货膨胀”？》</div>
+		  </div>
+		  <style>
+			.div {
+			  display: flex;
+			  flex-direction: column;
+			  max-width: 1379px;
+			  justify-content: flex-start;
+			  align-items: flex-end;
+			  padding-top: 62px;
+			  padding-right: 43px;
+			  padding-bottom: 62px;
+			  padding-left: 365px;
+			  background-color: rgba(255, 255, 255, 1);
+			}
+			.哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈 {
+			  max-width: 584px;
+			  color: rgba(0, 0, 0, 0.20000000298023224);
+			  font-size: 13px;
+			  letter-spacing: 0%;
+			  text-align: left;
+			  font-family: "Inter", sans-serif;
+			}
+			.哈哈-本是表达开心之意，如今我们却要用-哈哈哈哈哈-笑死 {
+			  max-width: 752px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 24px;
+			  line-height: 28px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			  font-family: "Exo", sans-serif;
+			}
+			.表示高度的词语-很、高、太-使用久了也会失去锋芒-不再表示 {
+			  max-width: 418px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			  cursor: pointer;
+			  pointer-events: auto;
+			  display: flex;
+			  margin-left: 47px;
+			}
+			.div-2 {
+			  max-width: 847px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 128px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			  font-family: "Exo", sans-serif;
+			}
+			.这是一种语言贬值-语义磨损-词义弱化的表现。语义在使用中产生 {
+			  max-width: 510px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 24px;
+			  line-height: 28px;
+			  letter-spacing: -1%;
+			  text-align: left;
+			  font-family: "Exo", sans-serif;
+			}
+			.div-3 {
+			  max-width: 255px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 24px;
+			  line-height: 28px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			  font-family: "Exo", sans-serif;
+			}
+			.词语滥用使得词义掉价，我们陷入了自己编就的-文字失语-陷阱 {
+			  max-width: 180px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			}
+			.人们打出一连串的-哈哈哈哈哈-，比寻找合适的文本词语和表情包 {
+			  max-width: 187px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			}
+			.div-4 {
+			  max-width: 249px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			  font-family: "Exo", sans-serif;
+			}
+			.币制是交换财富的手段，语言是表达思想和情感的媒介；如同制币 {
+			  max-width: 217px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			}
+			.div-5 {
+			  display: flex;
+			  position: relative;
+			  min-width: 20px;
+			  min-height: 20px;
+			  max-width: 591px;
+			  width: 74.25%;
+			  margin-top: 12px;
+			  opacity: 0.2;
+			}
+			.image {
+			  object-fit: cover;
+			  object-position: center;
+			  position: absolute;
+			  height: 100%;
+			  width: 100%;
+			  top: 0;
+			  left: 0;
+			}
+			.image-sizer {
+			  width: 100%;
+			  padding-top: 141.28595600676817%;
+			  pointer-events: none;
+			  font-size: 0;
+			}
+			.div-6 {
+			  max-width: 129px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: right;
+			  font-family: "Exo", sans-serif;
+			}
+			.在调研的过程中，我们发现了一个现象-这些学者们在文章中都提 {
+			  max-width: 242px;
+			  margin-top: 12px;
+			  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 24px;
+			  line-height: 28px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			  font-family: "Exo", sans-serif;
+			}
+			.而正是这种通过字词符号数量表达重视、拉高情绪阈值的-滥用-， {
+			  max-width: 205px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: left;
+			}
+			.div-7 {
+			  max-width: 307px;
+			  margin-top: 12px;
+			  color: rgba(0, 0, 0, 1);
+			  font-size: 14px;
+			  letter-spacing: -9%;
+			  text-align: right;
+			  font-family: "Exo", sans-serif;
+			}
+		  </style>
+	</body>
+</html>
