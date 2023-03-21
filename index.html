@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+          display: flex;
+          flex-direction: column;
+          max-width: 200%;
+          justify-content: flex-start;
+          align-items: center;
+          background-color: rgba(255, 255, 255, 1);
+        }
+        .div-2 {
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+          justify-content: flex-start;
+          align-self: stretch;
+          width: 100vw;
+          align-items: center;
+        }
+        .div-3 {
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+          justify-content: flex-start;
+          align-self: stretch;
+          width: auto;
+          align-items: center;
+          padding-top: 18px;
+          padding-right: 97px;
+          padding-bottom: 18px;
+          padding-left: 97px;
+          border-color: rgba(0, 0, 0, 1);
+          border-width: 2px;
+          border-style: solid;
+          background-color: rgba(255, 255, 255, 1);
+        }
+        .div-4 {
+          display: flex;
+          flex-direction: column;
+          max-width: 800px;
+        }
+        .div-5 {
+          display: flex;
+        }
+        @media (max-width: 999px) {
+          .div-5 {
+            flex-direction: column;
+            align-items: stretch;
+          }
+        }
+        .column {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: calc(24.97% - 15px);
+          margin-left: 0px;
+        }
+        @media (max-width: 999px) {
+          .column {
+            width: 100%;
+          }
+        }
+        .div-6 {
+          max-width: auto;
+          min-width: 200px;
+          color: rgba(0, 0, 0, 1);
+          font-size: 18px;
+          letter-spacing: 0%;
+          text-align: center;
+          font-family: "MS Outlook", sans-serif;
+        }
+        .column-2 {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: calc(24.97% - 15px);
+          margin-left: 20px;
+        }
+        @media (max-width: 999px) {
+          .column-2 {
+            width: 100%;
+          }
+        }
+        .div-7 {
+          max-width: auto;
+          min-width: 200px;
+          color: rgba(0, 0, 0, 1);
+          font-size: 18px;
+          letter-spacing: 0%;
+          text-align: center;
+          font-family: "MS Outlook", sans-serif;
+        }
+        .column-3 {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: calc(24.97% - 15px);
+          margin-left: 20px;
+        }
+        @media (max-width: 999px) {
+          .column-3 {
+            width: 100%;
+          }
+        }
+        .div-8 {
+          max-width: auto;
+          min-width: 200px;
+          color: rgba(0, 0, 0, 1);
+          font-size: 18px;
+          letter-spacing: 0%;
+          text-align: center;
+          font-family: "MS Outlook", sans-serif;
+        }
+        .column-4 {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: calc(24.97% - 15px);
+          margin-left: 20px;
+        }
+        @media (max-width: 999px) {
+          .column-4 {
+            width: 100%;
+          }
+        }
+        .div-9 {
+          max-width: auto;
+          min-width: 200px;
+          color: rgba(0, 0, 0, 1);
+          font-size: 18px;
+          letter-spacing: 0%;
+          text-align: center;
+          font-family: "MS Outlook", sans-serif;
+        }
+        .div-10 {
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+          justify-content: flex-start;
+          align-self: stretch;
+          width: auto;
+          align-items: flex-start;
+          margin-top: -2px;
+          padding-top: 30px;
+          padding-right: 60px;
+          padding-bottom: 30px;
+          padding-left: 60px;
+          border-color: rgba(0, 0, 0, 1);
+          border-width: 2px;
+          border-style: solid;
+        }
+        .div-11 {
+          display: flex;
+          flex-direction: column;
+          max-width: 300px;
+        }
+        .div-12 {
+          display: flex;
+        }
+        @media (max-width: 999px) {
+          .div-12 {
+            flex-direction: column;
+            align-items: stretch;
+          }
+        }
+        .column-5 {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: calc(49.88% - 10px);
+          margin-left: 0px;
+        }
+        @media (max-width: 999px) {
+          .column-5 {
+            width: 100%;
+          }
+        }
+        .div-13 {
+          max-width: 210px;
+          color: rgba(0, 0, 0, 1);
+          font-size: 36px;
+          letter-spacing: 0%;
+          text-align: left;
+          font-family: "Lucida Console", sans-serif;
+        }
+        .column-6 {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: calc(35.63% - 10px);
+          margin-left: 20px;
+        }
+        @media (max-width: 999px) {
+          .column-6 {
+            width: 100%;
+          }
+        }
+        .div-14 {
+          display: flex;
+          flex-direction: row;
+          max-width: 150px;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        .div-15 {
+          display: flex;
+          flex-direction: row;
+          max-width: 45px;
+          justify-content: center;
+          align-items: flex-end;
+          border-radius: 3px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          border-color: rgba(0, 0, 0, 1);
+          border-width: 1px;
+          border-style: solid;
+          background-color: rgba(0, 0, 0, 1);
+          color: rgba(255, 255, 255, 1);
+          font-size: 18px;
+          letter-spacing: 0%;
+          text-align: center;
+          font-family: "Helvetica", sans-serif;
+        }
+        .div-16 {
+          display: flex;
+          flex-direction: row;
+          max-width: 66px;
+          justify-content: center;
+          align-items: flex-end;
+          margin-left: 10px;
+          border-radius: 3px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          border-color: rgba(0, 0, 0, 1);
+          border-width: 1px;
+          border-style: solid;
+          background-color: rgba(0, 0, 0, 1);
+          color: rgba(255, 255, 255, 1);
+          font-size: 18px;
+          letter-spacing: 0%;
+          text-align: center;
+          font-family: "Helvetica", sans-serif;
+        }
+    </style>
+    <link rel = "stylesheet" href = "description.css">
+</head>
+<body style="display: flex" align="center">
+    <div class="div" style="display: flex" >
+        <div class="div-2">
+            <div class="div-3">
+                <div class="div-4">
+                <div class="builder-columns div-5">
+                    <div class="builder-column column">
+                    <div class="div-6">莪①矗説①傹菿疧</div>
+                    </div>
+                    <div class="builder-column column-2">
+                    <div class="div-7">莪倣棄孒閞戰乧僟仩敩</div>
+                    </div>
+                    <div class="builder-column column-3">
+                    <div class="div-8">莪楿信莪們哋亾</div>
+                    </div>
+                    <div class="builder-column column-4">
+                    <div class="div-9">伮潑沖蒄憑孄處</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="div-10">
+                <div class="div-11">
+                <div class="builder-columns div-12">
+                    <div class="builder-column column-5">
+                    <div class="div-13">Words Inflation</div>
+                    </div>
+                    <div class="builder-column column-6">
+                    <div class="div-14">
+                        <div class="div-15">Index</div>
+                        <div class="div-16">Process</div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="container">
+                <div class="collection"></div>
+                <span>LeonTennyson is the <br> most handsome man in <br> this world</span>
+            </div>
+    </div>
+
+</body>
+</html>
