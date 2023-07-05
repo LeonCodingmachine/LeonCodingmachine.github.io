@@ -13,18 +13,19 @@ body{
     align-items: center;
     min-height: 50vw;
     width: 100vw;
-    background-color: #FFFFFF;
-    outline-color: black;
+    background-color: #000000;
+    outline-color: rgb(255, 255, 255);
     flex-direction: column;
     filter: contrast(30);
+    
   }
   
   .collection {
     width: 750px;
     height: 750px;
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(0, 0, 0);
     outline-style: solid;
-    outline-color: black;
+    outline-color: rgb(255, 242, 242);
     outline-width: 10px;
     /* border-color: rgb(255, 255, 255); */
     border-radius: 100%;
@@ -36,7 +37,7 @@ body{
     position: absolute;
     font-family: Helvetica;
     font-size: 60px;
-    color: #000000;
+    color: #ffffff;
   }
 
   @keyframes collection {
